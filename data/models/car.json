@@ -1,0 +1,159 @@
+{
+    "type":"class Ubpa::Scene",
+    "root":{
+        "type":"class Ubpa::SObj",
+        "children":[
+            {
+                "type":"class Ubpa::SObj",
+                "name":"env light",
+                "Components":[
+                    {
+                        "type":"class Ubpa::Cmpt::Light",
+                        "light":{
+                            "type":"struct Ubpa::EnvLight",
+                            "texture":{
+                                "type":"class Ubpa::Texture2D",
+                                "inv_v":true,
+                                "path":"../data/textures/circus_arena_2k.hdr"
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                "type":"class Ubpa::SObj",
+                "children":[
+                    {
+                        "type":"class Ubpa::SObj",
+                        "name":"wall_down",
+                        "Components":[
+                            {
+                                "type":"class Ubpa::Cmpt::Position",
+                                "value":[
+                                    -0.3,
+                                    -1.5,
+                                    -3
+                                ]
+                            },
+                            {
+                                "type":"class Ubpa::Cmpt::Geometry",
+                                "primitive":{
+                                    "type":"class Ubpa::Square"
+                                }
+                            },
+                            {
+                                "type":"class Ubpa::Cmpt::Material",
+                                "material":{
+                                    "type":"struct Ubpa::stdBRDF",
+                                    "albedo_factor":[
+                                        1,
+                                        0.800000011920929,
+                                        0.20000000298023224
+                                    ],
+                                    "roughness_factor":0.10000000149011612
+                                }
+                            },
+                            {
+                                "type":"class Ubpa::Cmpt::Scale",
+                                "value":[
+                                    5,
+                                    1,
+                                    5
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type":"class Ubpa::SObj",
+                        "name":"car",
+                        "Components":[
+                            {
+                                "type":"class Ubpa::Cmpt::Position",
+                                "value":[
+                                    0.10000000149011612,
+                                    0.10000000149011612,
+                                    0.10000000149011612
+                                ]
+                            },
+                            {
+                                "type":"class Ubpa::Cmpt::Geometry",
+                                "primitive":{
+                                    "type":"class Ubpa::TriMesh",
+                                    "path":"../data/obj/animals/abz23wqgil1c-Smaug/Smaug.obj"
+                                }
+                            },
+                            {
+                                "type":"class Ubpa::Cmpt::Material",
+                                "material":{
+                                    "type":"struct Ubpa::stdBRDF",
+                                    "albedo_factor":[
+                                        1.022,
+                                        0.782,
+                                        0.344
+                                    ],
+                                    "metalness_factor":0.8,
+                                    "roughness_factor":0.1
+                                }
+                            },
+                            {
+                                "type":"class Ubpa::Cmpt::Scale",
+                                "value":[
+                                    1.5,
+                                    1.5,
+                                    1.5
+                                ]
+                            },
+                            {
+                                "type":"class Ubpa::Cmpt::Position",
+                                "value":[
+                                    -8,
+                                    -1.2,
+                                    -0.3
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "name":"cornellbox",
+                "Components":[
+                    {
+                        "type":"class Ubpa::Cmpt::Position",
+                        "value":[
+                            0,
+                            0,
+                            -6
+                        ]
+                    },
+                    {
+                        "type":"class Ubpa::Cmpt::Scale",
+                        "value":[
+                            2,
+                            2,
+                            2
+                        ]
+                    }
+                ]
+            },
+            {
+                "type":"class Ubpa::SObj",
+                "name":"camera_obj",
+                "Components":[
+                    {
+                        "type":"class Ubpa::Cmpt::PathTracerAgency"
+                    },
+                    {
+                        "type":"class Ubpa::Cmpt::Camera",
+                        "ar":1.7777777910232545,
+                        "fov":1.0471975803375245
+                    }
+                ]
+            }
+        ],
+        "name":"scene",
+        "Components":[
+            {
+                "type":"class Ubpa::Cmpt::Root"
+            }
+        ]
+    }
+}

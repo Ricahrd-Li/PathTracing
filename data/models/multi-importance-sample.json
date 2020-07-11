@@ -1,0 +1,142 @@
+{
+    "type":"class Ubpa::Scene",
+    "root":{
+        "type":"class Ubpa::SObj",
+        "children":[
+            {
+                "type":"class Ubpa::SObj",
+                "name":"env light",
+                "Components":[
+                    {
+                        "type":"class Ubpa::Cmpt::Light",
+                        "light":{
+                            "type":"struct Ubpa::EnvLight",
+                            "texture":{
+                                "type":"class Ubpa::Texture2D",
+                                "inv_v":true,
+                                "path":"../data/textures/adams_place_bridge_2k"
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                "type":"class Ubpa::SObj",
+                "name":"metal_ball",
+                "Components":[
+                    {
+                        "type":"class Ubpa::Cmpt::Position",
+                        "value":[
+                            0,
+                            -1,
+                            -2
+                        ]
+                    },
+                    {
+                        "type":"class Ubpa::Cmpt::Geometry",
+                        "primitive":{
+                            "type":"class Ubpa::Sphere"
+                        }
+                    },
+                    {
+                        "type":"class Ubpa::Cmpt::Material",
+                        "material":{
+                            "type":"struct Ubpa::stdBRDF",
+                            "albedo_factor":[
+                                1,
+                                0.800000011920929,
+                                0.20000000298023224
+                            ],
+                            "roughness_factor":0.10000000149011612
+                        }
+                    },
+                    {
+                        "type":"class Ubpa::Cmpt::Scale",
+                        "value":[
+                            0.4000000059604645,
+                            0.4000000059604645,
+                            0.4000000059604645
+                        ]
+                    }
+                ]
+            },  
+            {
+                "type":"class Ubpa::SObj",
+                "children":[
+                    {
+                        "type":"class Ubpa::SObj",
+                        "name":"wall_down",
+                        "Components":[
+                            {
+                                "type":"class Ubpa::Cmpt::Position",
+                                "value":[
+                                    0,
+                                    -1,
+                                    0
+                                ]
+                            },
+                            {
+                                "type":"class Ubpa::Cmpt::Geometry",
+                                "primitive":{
+                                    "type":"class Ubpa::Square"
+                                }
+                            },
+                            {
+                                "type":"class Ubpa::Cmpt::Material",
+                                "material":{
+                                    "type":"struct Ubpa::stdBRDF",
+                                    "albedo_factor":[
+                                        0.78,
+                                        0.78,
+                                        0.78
+                                    ],
+                                    "metalness_factor":0.9,
+                                    "roughness_factor":0.10000000149011612
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "name":"cornellbox",
+                "Components":[
+                    {
+                        "type":"class Ubpa::Cmpt::Position",
+                        "value":[
+                            0,
+                            0,
+                            -6
+                        ]
+                    },
+                    {
+                        "type":"class Ubpa::Cmpt::Scale",
+                        "value":[
+                            2,
+                            2,
+                            2
+                        ]
+                    }
+                ]
+            },
+            {
+                "type":"class Ubpa::SObj",
+                "name":"camera_obj",
+                "Components":[
+                    {
+                        "type":"class Ubpa::Cmpt::PathTracerAgency"
+                    },
+                    {
+                        "type":"class Ubpa::Cmpt::Camera",
+                        "ar":1.7777777910232545,
+                        "fov":1.0471975803375245
+                    }
+                ]
+            }
+        ],
+        "name":"scene",
+        "Components":[
+            {
+                "type":"class Ubpa::Cmpt::Root"
+            }
+        ]
+    }
+}
