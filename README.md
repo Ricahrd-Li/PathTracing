@@ -1,6 +1,6 @@
 # Path Tracing
 
-**The codes of render engine and basic libs are from teaching assistant Ubpa. **
+**The codes of render engine and basic libs are from teaching assistant Ubpa.**
 
 Build Method
 + use cmake: config, generate, then build. 
