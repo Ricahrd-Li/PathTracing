@@ -40,7 +40,7 @@
                     {
                         "type":"class Ubpa::Cmpt::Scale",
                         "value":[
-                            0,
+                            0.5,
                             0.5,
                             0.5
                         ]
