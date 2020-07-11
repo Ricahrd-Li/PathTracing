@@ -1,5 +1,11 @@
 # Path Tracing
 
+![](./data/gold_car.png)
+
+![](./data/smaug1.png)
+
+
+![](./data/rst_1024spp.png)
 **The codes of render engine and basic libs are from teaching assistant Ubpa.**
 
 Build Method
