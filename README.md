@@ -8,6 +8,8 @@ Build Method
 Editor Interface
 ![](./images/interface.PNG)
 
-For core code, please see: [here](https://github.com/Ricahrd-Li/PathTracing/blob/master/src/PathTracer/PathTracer.cpp)
+For core code of path tracing, please see: 
++ [header](https://github.com/Ricahrd-Li/PathTracing/blob/master/src/PathTracer/PathTracer.h)
++ [cpp](https://github.com/Ricahrd-Li/PathTracing/blob/master/src/PathTracer/PathTracer.cpp)
 
 For introduction, please see this Zhihu article: [link](https://zhuanlan.zhihu.com/p/138317358)
